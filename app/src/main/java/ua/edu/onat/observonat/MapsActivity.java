@@ -9,6 +9,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.TileOverlayOptions;
+
+import ua.edu.onat.observonat.Helpers.CustomMapTileProvider;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -37,8 +40,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
+        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(new CustomMapTileProvider(getResources().getAssets())));
+        // Ставим на главный корпус
         LatLng mainCampus = new LatLng(46.482293, 30.723556);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(mainCampus));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17f));
