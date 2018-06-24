@@ -1,7 +1,9 @@
 package ua.edu.onat.observonat;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import eightbitlab.com.blurview.BlurView;
@@ -17,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         createBlur(R.id.account_container);
         createBlur(R.id.teacher_container);
         createBlur(R.id.library_container);
+        BlurView maps_container = findViewById(R.id.maps_container);
+        maps_container.setOnClickListener(v -> {
+            Intent data = new Intent(getBaseContext(), MapsActivity.class);
+            startActivity(data);
+        });
     }
     void createBlur(int id)
     {
