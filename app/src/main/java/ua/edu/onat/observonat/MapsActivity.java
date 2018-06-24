@@ -1,7 +1,9 @@
 package ua.edu.onat.observonat;
 
+import android.graphics.PointF;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,10 +42,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
         mMap.addTileOverlay(new TileOverlayOptions().tileProvider(new CustomMapTileProvider(getResources().getAssets())));
         // Ставим на главный корпус
         LatLng mainCampus = new LatLng(46.482293, 30.723556);
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(mainCampus));
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(17f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mainCampus, 17f));
+
+        //origin
+        //76722 -> 3584
+        int xtile = (int)Math.floor( (30.723556 + 180) / 360 * (1<<17) ) ;
+        //46376 -> 2816
+        int ytile = (int)Math.floor( (1 - Math.log(Math.tan(Math.toRadians(46.482293)) + 1 / Math.cos(Math.toRadians(46.482293))) / Math.PI) / 2 * (1<<17) ) ;
+
     }
 }

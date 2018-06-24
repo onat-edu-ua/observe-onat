@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     {
         float radius = 5;
         BlurView maps_container = findViewById(id);
-        maps_container.setupWith((RelativeLayout)findViewById(R.id.main_activity_content))
+        maps_container.setupWith(findViewById(R.id.main_activity_content))
                 .blurAlgorithm(new RenderScriptBlur(this))
                 .blurRadius(radius)
                 .setHasFixedTransformationMatrix(true);

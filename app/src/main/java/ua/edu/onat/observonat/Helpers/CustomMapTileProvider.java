@@ -19,17 +19,29 @@ public class CustomMapTileProvider implements TileProvider {
 
     public CustomMapTileProvider(AssetManager assets) {
         mAssets = assets;
+        try {
+            String[] files = mAssets.list("map");
+            for (String file:files
+                 ) {
+                Log.v("File is", file);
+            }
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
     @Override
     public Tile getTile(int x, int y, int zoom) {
-        if(zoom<18)
-            return null;
+//        if(zoom<18)
+//            return null;
         byte[] image = readTileImage(x, y, zoom);
         return image == null ? null : new Tile(TILE_WIDTH, TILE_HEIGHT, image);
     }
 
     private byte[] readTileImage(int x, int y, int zoom) {
+
         InputStream in = null;
         ByteArrayOutputStream buffer = null;
 
@@ -59,11 +71,13 @@ public class CustomMapTileProvider implements TileProvider {
     }
 
     private String getTileFilename(int x, int y, int zoom) {
-        if(zoom>18)
-        {
-        }
-        return "";
-        //return "ONAT4.png";
-        //return "map/" + zoom + '/' + x + '/' + y + ".png";
+
+        int factorX = 76722 - x + 3; // add one to prevent becoming 0-0.png
+        int factorY = 46376 - y + 1;
+        Log.v("Factor X", String.valueOf(factorX));
+        if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
+            return "";
+
+        return "map/" + ((15-factorX)*256) + '-' + ((12-factorY)*256) + ".png";
     }
 }
