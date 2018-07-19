@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ObservONAT</string>
     <string name="title_activity_maps">Map</string>
+    <string name="teachers_title">Teachers</string>
+    <string name="search_hint">Search…</string>
+    <string name="notification_description">Notification</string>
+    <string name="home_top_bar">Home</string>
+    <string name="navigation_title">Navigation</string>
+    <string name="library_title">Library</string>
+    <string name="account_title">Account</string>
 </resources>

@@ -14,6 +14,29 @@
         android:background="#30ebebeb">
 
         <LinearLayout
+            android:id="@+id/notification_area"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            >
+            <ImageView
+                android:contentDescription="@string/notification_description"
+                android:layout_width="wrap_content"
+                android:src="@drawable/notification"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@drawable/background_notification"
+                android:text="3"
+                android:gravity="center"
+                android:fontFamily="@font/miriad_pro"
+                android:textColor="#d9d7d7"
+                android:layout_width="20dp"
+                android:layout_marginLeft="6dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -30,12 +53,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:fontFamily="@font/fradm"
-                android:text="Home"
+                android:text="@string/home_top_bar"
                 android:textColor="#d9d7d7"
                 android:textSize="30sp" />
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/settings"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_alignParentRight="true"
@@ -92,7 +116,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/arial"
-                            android:text="Navigation"
+                            android:text="@string/navigation_title"
                             android:textColor="#adadad"
                             android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -140,7 +164,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/arial"
-                            android:text="Library"
+                            android:text="@string/library_title"
                             android:textColor="#adadad"
                             android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +216,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/arial"
-                            android:text="Teachers"
+                            android:text="@string/teachers_title"
                             android:textColor="#adadad"
                             android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -241,7 +265,7 @@
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
                             android:fontFamily="@font/arial"
-                            android:text="Account"
+                            android:text="@string/account_title"
                             android:textColor="#adadad"
                             android:textSize="16sp"
                             app:layout_constraintEnd_toEndOf="parent"
