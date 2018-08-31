@@ -47,12 +47,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Ставим на главный корпус
         LatLng mainCampus = new LatLng(46.482293, 30.723556);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mainCampus, 17f));
-
-        //origin
-        //76722 -> 3584
-        int xtile = (int)Math.floor( (30.723556 + 180) / 360 * (1<<17) ) ;
-        //46376 -> 2816
-        int ytile = (int)Math.floor( (1 - Math.log(Math.tan(Math.toRadians(46.482293)) + 1 / Math.cos(Math.toRadians(46.482293))) / Math.PI) / 2 * (1<<17) ) ;
-
     }
 }

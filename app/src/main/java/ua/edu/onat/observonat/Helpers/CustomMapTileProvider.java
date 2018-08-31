@@ -19,17 +19,6 @@ public class CustomMapTileProvider implements TileProvider {
 
     public CustomMapTileProvider(AssetManager assets) {
         mAssets = assets;
-        try {
-            String[] files = mAssets.list("map");
-            for (String file:files
-                 ) {
-                Log.v("File is", file);
-            }
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
     }
 
     @Override
@@ -46,7 +35,10 @@ public class CustomMapTileProvider implements TileProvider {
         ByteArrayOutputStream buffer = null;
 
         try {
-            in = mAssets.open(getTileFilename(x, y, zoom));
+            String nameTile = getTileFilename(x, y, zoom);
+            if(nameTile.equals(""))
+                return null;
+            in = mAssets.open(nameTile);
             buffer = new ByteArrayOutputStream();
 
             int nRead;
@@ -58,10 +50,7 @@ public class CustomMapTileProvider implements TileProvider {
             buffer.flush();
 
             return buffer.toByteArray();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } catch (OutOfMemoryError e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         } finally {
@@ -71,13 +60,31 @@ public class CustomMapTileProvider implements TileProvider {
     }
 
     private String getTileFilename(int x, int y, int zoom) {
-
-        int factorX = 76722 - x + 3; // add one to prevent becoming 0-0.png
-        int factorY = 46376 - y + 1;
-        Log.v("Factor X", String.valueOf(factorX));
-        if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
+        if(zoom<16||zoom>17)
             return "";
 
-        return "map/" + ((15-factorX)*256) + '-' + ((12-factorY)*256) + ".png";
+        //76722 -> 3584
+        //38361
+        int xtile = (int)Math.floor( (30.723556 + 180) / 360 * (1<<zoom) ) ;
+        //46376 -> 2816
+        int ytile = (int)Math.floor( (1 - Math.log(Math.tan(Math.toRadians(46.482293)) + 1 / Math.cos(Math.toRadians(46.482293))) / Math.PI) / 2 * (1<<zoom) ) ;
+
+        switch(zoom){
+            case 17:
+                int factorX = xtile - x + 3; // add one to prevent becoming 0-0.png
+                int factorY = ytile - y + 1;
+                if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
+                    return "";
+
+                return "map/" + zoom +"/" + ((15-factorX)*256) + '-' + ((12-factorY)*256) + ".png";
+            case 16:
+                factorX = xtile - x + 1; // add one to prevent becoming 0-0.png
+                factorY = ytile - y + 1;
+                if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
+                    return "";
+
+                return "map/" + zoom +"/" + ((11-factorX)*256) + '-' + ((9-factorY)*256) + ".png";
+        }
+        return "";
     }
 }
