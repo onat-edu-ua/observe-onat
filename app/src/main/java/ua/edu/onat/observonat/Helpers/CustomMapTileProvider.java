@@ -72,13 +72,13 @@ public class CustomMapTileProvider implements TileProvider {
         switch(zoom){
             case 17:
                 int factorX = xtile - x + 3; // add one to prevent becoming 0-0.png
-                int factorY = ytile - y + 1;
+                int factorY = ytile - y + 2;
                 if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
                     return "";
 
                 return "map/" + zoom +"/" + ((15-factorX)*256) + '-' + ((12-factorY)*256) + ".png";
             case 16:
-                factorX = xtile - x + 1; // add one to prevent becoming 0-0.png
+                factorX = xtile - x + 2; // add one to prevent becoming 0-0.png
                 factorY = ytile - y + 1;
                 if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
                     return "";

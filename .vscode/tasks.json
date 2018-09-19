@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "options": {
         "env":{
-            "JAVA_HOME": "D:\\dell\\folderandroid\\jre"
+            "JAVA_HOME": "D:\\New folder\\jre"
         }
     },
     "tasks": [
