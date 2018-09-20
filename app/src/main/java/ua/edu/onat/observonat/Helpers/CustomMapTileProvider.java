@@ -60,19 +60,35 @@ public class CustomMapTileProvider implements TileProvider {
     }
 
     private String getTileFilename(int x, int y, int zoom) {
-        if(zoom<16||zoom>17)
+        if(zoom<16||zoom>19)
             return "";
 
         //76722 -> 3584
         //38361
+
         int xtile = (int)Math.floor( (30.723556 + 180) / 360 * (1<<zoom) ) ;
         //46376 -> 2816
         int ytile = (int)Math.floor( (1 - Math.log(Math.tan(Math.toRadians(46.482293)) + 1 / Math.cos(Math.toRadians(46.482293))) / Math.PI) / 2 * (1<<zoom) ) ;
-
+        Log.v("Zoom:", String.valueOf(zoom));
         switch(zoom){
+            case 19:
+                int factorX =  xtile - x + 4;
+                int factorY = ytile - y + 3;
+                Log.v("Coordinate:", String.valueOf(factorX)+":"+String.valueOf(factorY));
+                if(factorX < 0 || factorY < 0 || factorY > 47 || factorX > 59)
+                    return "";
+                return "map/" + zoom + "/_" + (59-factorX)  + "_" + (47-factorY) + ".png";
+            case 18:
+                factorX =  xtile - x + 4;
+                factorY = ytile - y + 3;
+                Log.v("Coordinate:", String.valueOf(factorX)+":"+String.valueOf(factorY));
+                if(factorX < 0 || factorY < 0 || factorY > 23 || factorX > 29)
+                    return "";
+                return "map/" + zoom + "/_" + (29-factorX)  + "_" + (23-factorY) + ".png";
             case 17:
-                int factorX = xtile - x + 3; // add one to prevent becoming 0-0.png
-                int factorY = ytile - y + 2;
+                factorX = xtile - x + 3; // add one to prevent becoming 0-0.png
+                factorY = ytile - y + 2;
+                Log.v("Coordinate:", String.valueOf(factorX)+":"+String.valueOf(factorY));
                 if(factorX < 0 || factorY < 0 || factorY > 12 || factorX > 15)
                     return "";
 
