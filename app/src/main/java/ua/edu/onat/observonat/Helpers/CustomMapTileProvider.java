@@ -72,14 +72,14 @@ public class CustomMapTileProvider implements TileProvider {
         Log.v("Zoom:", String.valueOf(zoom));
         switch(zoom){
             case 19:
-                int factorX =  xtile - x + 4;
-                int factorY = ytile - y + 3;
+                int factorX =  xtile - x + 1;
+                int factorY = ytile - y + 1;
                 Log.v("Coordinate:", String.valueOf(factorX)+":"+String.valueOf(factorY));
                 if(factorX < 0 || factorY < 0 || factorY > 47 || factorX > 59)
                     return "";
                 return "map/" + zoom + "/_" + (59-factorX)  + "_" + (47-factorY) + ".png";
             case 18:
-                factorX =  xtile - x + 4;
+                factorX =  xtile - x + 7;
                 factorY = ytile - y + 3;
                 Log.v("Coordinate:", String.valueOf(factorX)+":"+String.valueOf(factorY));
                 if(factorX < 0 || factorY < 0 || factorY > 23 || factorX > 29)
