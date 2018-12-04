@@ -5,6 +5,7 @@ import android.graphics.PointF;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,45 +18,45 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.TileOverlayOptions;
 
 import ua.edu.onat.observonat.Helpers.CustomMapTileProvider;
+import ua.edu.onat.observonat.Helpers.TouchImageView;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
-
-    private GoogleMap mMap;
+public class MapsActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
         Button select_floor = findViewById(R.id.select_floor);
-        select_floor.setOnClickListener(new View.OnClickListener() {
+        select_floor.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), ThreeDimensionalActivity.class)));
+        TouchImageView mapBigPic = findViewById(R.id.mapBigPic);
+        mapBigPic.setZoom(3);
+        mapBigPic.setOnTouchListener(new View.OnTouchListener() {
+            private int CLICK_ACTION_THRESHOLD = 5;
+            private float startX;
+            private float startY;
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ThreeDimensionalActivity.class));
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startX = event.getX();
+                        startY = event.getY();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        float endX = event.getX();
+                        float endY = event.getY();
+                        if (isAClick(startX, endX, startY, endY)) {
+                            Log.d("Click", "fired");
+                        }
+                        break;
+                }
+                return true;
+            }
+
+            private boolean isAClick(float startX, float endX, float startY, float endY) {
+                float differenceX = Math.abs(startX - endX);
+                float differenceY = Math.abs(startY - endY);
+                return !(differenceX > CLICK_ACTION_THRESHOLD/* =5 */ || differenceY > CLICK_ACTION_THRESHOLD);
             }
         });
-    }
-
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(new CustomMapTileProvider(getResources().getAssets())));
-        // Ставим на главный корпус
-        LatLng mainCampus = new LatLng(46.482293, 30.723556);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mainCampus, 17f));
     }
 }

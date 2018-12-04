@@ -23,23 +23,6 @@ public class MyGLSurfaceView extends GLSurfaceView {
 
             @Override
             public void onSurfaceCreated(GL10 gl10, EGLConfig eglConfig) {
-                //                     r       g         b        a
-                GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-                ObjLoader objLoader = new ObjLoader(context, "Mug.obj");
-                int numFaces = objLoader.numFaces;
-
-// Initialize the buffers.
-                positions = ByteBuffer.allocateDirect(objLoader.positions.length * mBytesPerFloat)
-                        .order(ByteOrder.nativeOrder()).asFloatBuffer();
-                positions.put(objLoader.positions).position(0);
-
-                normals = ByteBuffer.allocateDirect(objLoader.normals.length * mBytesPerFloat)
-                        .order(ByteOrder.nativeOrder()).asFloatBuffer();
-                normals.put(objLoader.normals).position(0);
-
-                textureCoordinates = ByteBuffer.allocateDirect(objLoader.textureCoordinates.length * mBytesPerFloat)
-                        .order(ByteOrder.nativeOrder()).asFloatBuffer();
-                textureCoordinates.put(objLoader.textureCoordinates).position(0);
             }
 
             @Override
