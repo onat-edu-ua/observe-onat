@@ -44,8 +44,8 @@ public class MapsActivity extends FragmentActivity {
                     case MotionEvent.ACTION_UP:
                         float endX = event.getX();
                         float endY = event.getY();
-                        if (isAClick(startX, endX, startY, endY)) {
-                            Log.d("Click", "fired");
+                        if (isAClick(startX, endX, startY, endY) && startX>188 && startX < 801 && startY<1690 && startY> 894) {
+                            startActivity(new Intent(MapsActivity.this, FullScreen.class));
                         }
                         break;
                 }
