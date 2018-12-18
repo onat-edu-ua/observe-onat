@@ -26,8 +26,7 @@ public class MapsActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-        Button select_floor = findViewById(R.id.select_floor);
-        select_floor.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), ThreeDimensionalActivity.class)));
+
         TouchImageView mapBigPic = findViewById(R.id.mapBigPic);
         mapBigPic.setZoom(3);
         mapBigPic.setOnTouchListener(new View.OnTouchListener() {

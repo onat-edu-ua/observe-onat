@@ -1,9 +1,11 @@
 package ua.edu.onat.observonat;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -42,5 +44,7 @@ public class FullScreen extends AppCompatActivity {
             }
             floorFullScreen.setZoom(1);
         });
+        Button select_floor = findViewById(R.id.select_floor);
+        select_floor.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), ThreeDimensionalActivity.class)));
     }
 }
