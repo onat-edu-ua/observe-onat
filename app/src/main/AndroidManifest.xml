@@ -56,7 +56,15 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".LibraryActivity" />
+        <activity android:name=".LibraryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
         <activity android:name=".AccountActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ThreeDimensionalActivity" />
