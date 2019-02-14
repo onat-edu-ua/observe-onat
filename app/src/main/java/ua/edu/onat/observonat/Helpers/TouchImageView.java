@@ -17,7 +17,9 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
@@ -283,6 +285,10 @@ public class TouchImageView extends ImageView {
     		setZoom(delayedZoomVariables.scale, delayedZoomVariables.focusX, delayedZoomVariables.focusY, delayedZoomVariables.scaleType);
     		delayedZoomVariables = null;
     	}
+    	// Вот здесь рисуем красную линию
+    	Paint paint = new Paint();
+    	paint.setColor(Color.RED);
+    	canvas.drawLine(0,0,200,500, paint);
     	super.onDraw(canvas);
     }
     

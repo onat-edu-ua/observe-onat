@@ -1,23 +1,13 @@
 package ua.edu.onat.observonat;
 
 import android.content.Intent;
-import android.graphics.PointF;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.widget.SearchView;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.TileOverlayOptions;
-
-import ua.edu.onat.observonat.Helpers.CustomMapTileProvider;
 import ua.edu.onat.observonat.Helpers.TouchImageView;
 
 public class MapsActivity extends FragmentActivity {
@@ -55,6 +45,19 @@ public class MapsActivity extends FragmentActivity {
                 float differenceX = Math.abs(startX - endX);
                 float differenceY = Math.abs(startY - endY);
                 return !(differenceX > CLICK_ACTION_THRESHOLD/* =5 */ || differenceY > CLICK_ACTION_THRESHOLD);
+            }
+        });
+        SearchView searchView = findViewById(R.id.searchMap);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                Log.v("Search", s);
+                return false;
             }
         });
     }
