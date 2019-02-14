@@ -48,6 +48,9 @@ public class MapsActivity extends FragmentActivity {
             }
         });
         SearchView searchView = findViewById(R.id.searchMap);
+        searchView.setFocusable(false);
+        searchView.setIconified(false);
+        searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
