@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 import ua.edu.onat.observonat.R;
 
-public class DepartmentAdapter extends ArrayAdapter<DepartmentItem> implements View.OnClickListener {
+public class DepartmentAdapter extends ArrayAdapter<DepartmentItem> {
 
     private ArrayList<DepartmentItem> dataset;
     private Context _context;
@@ -46,8 +46,4 @@ public class DepartmentAdapter extends ArrayAdapter<DepartmentItem> implements V
         return convertView;
     }
 
-    @Override
-    public void onClick(View view) {
-        Log.v("Data: ", ((TextView)view.findViewById(R.id.name_of_department)).getText().toString());
-    }
 }

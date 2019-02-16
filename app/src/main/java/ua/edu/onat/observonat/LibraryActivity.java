@@ -1,11 +1,15 @@
 package ua.edu.onat.observonat;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -58,5 +62,14 @@ public class LibraryActivity extends AppCompatActivity {
                 }, error -> Log.v("Error","That didn't work!"));
 
         queue.add(stringRequest);
+
+        cafedras.setOnItemClickListener((adapterView, view, i, l) -> {
+            String departmentId = ((TextView)view.findViewById(R.id.id_of_department)).getText().toString();
+            Intent data = new Intent(getBaseContext(), DepartmentActivity.class);
+            Bundle b = new Bundle();
+            b.putString("departmentId", departmentId);
+            data.putExtras(b);
+            startActivity(data);
+        });
     }
 }
