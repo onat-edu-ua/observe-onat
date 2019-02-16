@@ -1,5 +1,6 @@
 package ua.edu.onat.observonat;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +18,13 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
+
+import ua.edu.onat.observonat.Helpers.DepartmentAdapter;
+import ua.edu.onat.observonat.Helpers.DepartmentItem;
 
 public class LibraryActivity extends AppCompatActivity {
 
@@ -33,15 +40,18 @@ public class LibraryActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 response -> {
                     try {
-                        List<String> departmentsStrings = new ArrayList<>();
                         JSONObject jObject = new JSONObject(response);
                         JSONArray departments = jObject.getJSONArray("departments");
+                        ArrayList<DepartmentItem> departmentItems = new ArrayList<DepartmentItem>();
+
                         for(int i=0;i<departments.length();i++) {
-                            departmentsStrings.add(((JSONObject)departments.get(i)).getString("name"));
+                            departmentItems.add(new DepartmentItem(((JSONObject)departments.get(i)).getString("name"),
+                                    ((JSONObject)departments.get(i)).getString("id")));
                         }
-                        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                                android.R.layout.simple_list_item_1, departmentsStrings);
-                        cafedras.setAdapter(adapter);
+
+                        DepartmentAdapter dAdapter = new DepartmentAdapter(departmentItems, this);
+
+                        cafedras.setAdapter(dAdapter);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
