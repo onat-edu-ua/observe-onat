@@ -4,12 +4,56 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_onat"
     tools:context=".AccountActivity">
     <TextView
-        android:layout_width="wrap_content"
+        android:background="#29ebebeb"
+        android:layout_width="match_parent"
+        android:textSize="24sp"
+        android:textColor="#e8e8e8"
+        android:textAlignment="center"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/fradm"
         android:id="@+id/user_name_display"
         android:layout_height="wrap_content" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_column="0"
+            android:text="Course:"
+            android:textColor="#e8e8e8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_column="1"
+            android:text="5"
+            android:textColor="#e8e8e8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="Department: "
+            android:textColor="#e8e8e8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="Infocommunications"
+            android:textColor="#e8e8e8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </GridLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
     <Button
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:text="Заплатить за академию"
         android:layout_height="wrap_content" />
