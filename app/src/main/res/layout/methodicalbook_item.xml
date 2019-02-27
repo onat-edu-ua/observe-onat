@@ -4,14 +4,19 @@
     android:orientation="horizontal"
     android:layout_height="match_parent">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/library_icon" />
+        android:src="@drawable/open_book"
+        android:layout_gravity="center"/>
     <TextView
         android:layout_width="wrap_content"
         android:id="@+id/methodicalbook_name"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#292929"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:fontFamily="@font/pt_sans"/>
     <TextView
         android:layout_width="wrap_content"
         android:visibility="gone"
