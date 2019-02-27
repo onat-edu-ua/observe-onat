@@ -1,6 +1,11 @@
 package ua.edu.onat.observonat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +26,7 @@ import ua.edu.onat.observonat.Helpers.methodicalAdapter;
 import ua.edu.onat.observonat.Helpers.methodicalItem;
 
 public class DepartmentActivity extends AppCompatActivity {
-
+    int REQUEST_WRITE_DATA = 2345;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +40,6 @@ public class DepartmentActivity extends AppCompatActivity {
             valueid = "0";
         }
         String url ="https://metod.onat.edu.ua/metods?search_query=&department_id=" + valueid;
-        Log.v("URL:", url);
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 response -> {
@@ -44,9 +48,7 @@ public class DepartmentActivity extends AppCompatActivity {
                         ArrayList<methodicalItem> methodicalItems = new ArrayList<>();
 
                         for(int i=0;i<jArray.length();i++) {
-                            //if (jArray.getJSONObject(i).getString("department_id").equals(valueid)) {
-                                methodicalItems.add(new methodicalItem(jArray.getJSONObject(i).getString("name"), jArray.getJSONObject(i).getString("download_url")));
-                            //}
+                            methodicalItems.add(new methodicalItem(jArray.getJSONObject(i).getString("name"), jArray.getJSONObject(i).getString("download_url")));
                         }
 
                         methodicalAdapter mAdapter = new methodicalAdapter(methodicalItems, this);
@@ -60,14 +62,27 @@ public class DepartmentActivity extends AppCompatActivity {
         queue.add(stringRequest);
 
         methods.setOnItemClickListener((adapterView, view, i, l) -> {
-            String metho = ((TextView)view.findViewById(R.id.methodicalbook_url)).getText().toString();
-            Intent data = new Intent(getBaseContext(), methodicalbookActivity.class);
-            Bundle b = new Bundle();
-            b.putString("metho", metho);
-            data.putExtras(b);
-            startActivity(data);
-        });
+            String methodUrl = ((TextView)view.findViewById(R.id.methodicalbook_url)).getText().toString();
+            // запрос на запись на карту памяти
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        REQUEST_WRITE_DATA);
+            }
+            // разрешение дано на запись
+            else {
+
+            }
+            });
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == REQUEST_WRITE_DATA) {
+            Log.v("Save", "there");
+        }
+    }
 }
 
