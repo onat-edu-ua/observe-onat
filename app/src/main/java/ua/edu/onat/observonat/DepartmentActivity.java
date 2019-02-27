@@ -28,25 +28,25 @@ public class DepartmentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_department);
         ListView methods = findViewById(R.id.methods);
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url ="https://metod.onat.edu.ua/metods?search_query=&department_id=0";
-
+        Intent intent = getIntent();
+        String valueid = intent.getStringExtra("departmentId");
+        Log.v("valueId", valueid);
+        if (valueid.equals(null)) {
+            valueid = "0";
+        }
+        String url ="https://metod.onat.edu.ua/metods?search_query=&department_id=" + valueid;
+        Log.v("URL:", url);
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 response -> {
                     try {
                         JSONArray jArray = new JSONArray(response);
-                        ArrayList<methodicalItem> methodicalItems = new ArrayList<methodicalItem>();
-                        Intent intent = getIntent();
-                        String valueid = intent.getStringExtra("departmentId");
-                        if (!valueid.equals(null)) {
-                            System.out.printf(valueid);
-                        }
+                        ArrayList<methodicalItem> methodicalItems = new ArrayList<>();
 
                         for(int i=0;i<jArray.length();i++) {
-                            if (jArray.getJSONObject(i).getString("department_id").equals(valueid)) {
+                            //if (jArray.getJSONObject(i).getString("department_id").equals(valueid)) {
                                 methodicalItems.add(new methodicalItem(jArray.getJSONObject(i).getString("name"), jArray.getJSONObject(i).getString("download_url")));
-                            }
-
+                            //}
                         }
 
                         methodicalAdapter mAdapter = new methodicalAdapter(methodicalItems, this);
