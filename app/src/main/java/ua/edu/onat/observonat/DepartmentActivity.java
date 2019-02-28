@@ -34,6 +34,8 @@ import java.net.URLConnection;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import ua.edu.onat.observonat.Helpers.methodicalAdapter;
 import ua.edu.onat.observonat.Helpers.methodicalItem;
@@ -49,10 +51,7 @@ public class DepartmentActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         Intent intent = getIntent();
         String valueid = intent.getStringExtra("departmentId");
-        Log.v("valueId", valueid);
-        if (valueid.equals(null)) {
-            valueid = "0";
-        }
+        if (valueid.equals(null)) valueid = "0";
         String url ="https://metod.onat.edu.ua/metods?search_query=&department_id=" + valueid;
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -96,7 +95,6 @@ public class DepartmentActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if(requestCode == REQUEST_WRITE_DATA) {
-            Log.v("Save", "there");
             if(methodUrl!=null)
                 new DownloadFile().execute(methodUrl);
         }
@@ -131,6 +129,8 @@ public class DepartmentActivity extends AppCompatActivity {
                 URL url = new URL(f_url[0]);
                 URLConnection connection = url.openConnection();
                 connection.connect();
+                Pattern pattern = Pattern.compile("(?<=filename=\")(.*)(?=\")");
+
                 // getting file length
                 int lengthOfFile = connection.getContentLength();
 
@@ -141,13 +141,14 @@ public class DepartmentActivity extends AppCompatActivity {
                 String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 
                 //Extract file name from URL
-                fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length());
-
-                //Append timestamp to file name
-                fileName = timestamp + "_" + fileName;
+                String tmpfileName =  connection.getHeaderField("Content-Disposition");
+                Matcher m = pattern.matcher(tmpfileName);
+                fileName = f_url[0].substring(f_url[0].lastIndexOf('/') + 1, f_url[0].length()) + ".pdf";
+                if(m.find())
+                    fileName = m.group(0);
 
                 //External directory path to save file
-                folder = Environment.getExternalStorageDirectory() + File.separator + "androiddeft/";
+                folder = Environment.getExternalStorageDirectory() + File.separator + "observonat/";
 
                 //Create androiddeft folder if it does not exist
                 File directory = new File(folder);
