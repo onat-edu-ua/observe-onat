@@ -206,6 +206,7 @@ public class DepartmentActivity extends AppCompatActivity {
             // Display File path after downloading
             Toast.makeText(getApplicationContext(),
                     message, Toast.LENGTH_LONG).show();
+
         }
     }
 }

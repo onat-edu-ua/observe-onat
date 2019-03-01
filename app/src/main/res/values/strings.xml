@@ -8,4 +8,22 @@
     <string name="navigation_title">Navigation</string>
     <string name="library_title">Library</string>
     <string name="account_title">Account</string>
+    <string name="departments">Department:</string>
+    <string name="payacad">Pay for Academy</string>
+    <string name="course">Course:</string>
+    <string name="floor">Floor</string>
+    <string name="app_theme">App theme</string>
+    <string name="save_cache">Save to cache</string>
+    <string name="logout">Log Out</string>
+    <string name="settings">Settings</string>
+    <string-array name="theme_array">
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="language_array">
+        <item>English</item>
+        <item>Русский</item>
+        <item>Українська</item>
+    </string-array>
+
 </resources>

@@ -25,7 +25,7 @@
        android:layout_height="wrap_content">
        <TextView
            android:layout_width="wrap_content"
-           android:text="Этаж"
+           android:text="@string/floor"
            android:layout_height="wrap_content" />
        <RadioGroup
            android:id="@+id/radioGroup"

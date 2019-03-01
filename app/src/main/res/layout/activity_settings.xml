@@ -9,7 +9,7 @@
     <TextView
         android:background="#29ebebeb"
         android:layout_width="match_parent"
-        android:text="Settings"
+        android:text="@string/settings"
         android:textAlignment="center"
         android:fontFamily="@font/fradm"
         android:textSize="24sp"
@@ -22,7 +22,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
-            android:text="App theme"
+            android:text="@string/app_theme"
             android:textColor="#e8e8e8"
             android:layout_height="wrap_content" />
         <TextView
@@ -42,7 +42,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:textColor="#e8e8e8"
-            android:text="Сохранять карты в кеш"
+            android:text="@string/save_cache"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <Space
@@ -51,7 +51,7 @@
         android:layout_height="match_parent" />
     <Button
         android:layout_gravity="center"
-        android:text="Log Out"
+        android:text="@string/logout"
         android:textColor="#fff"
         android:backgroundTint="#969696"
         android:layout_width="wrap_content"

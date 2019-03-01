@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ObservONAT</string>
+    <string name="title_activity_maps">Мапа</string>
+    <string name="teachers_title">Викладачі</string>
+    <string name="search_hint">Пошук…</string>
+    <string name="notification_description">Повідомлення</string>
+    <string name="home_top_bar">Додому</string>
+    <string name="navigation_title">Навігація</string>
+    <string name="library_title">Бібліотека</string>
+    <string name="account_title">Аккаунт</string>
+    <string name="departments">Інститут:</string>
+    <string name="payacad">Сплатити за академію</string>
+    <string name="course">Курс:</string>
+    <string name="floor">Поверх</string>
+    <string name="app_theme">Тема додатку</string>
+    <string name="save_cache">Зберегти в кєш</string>
+    <string name="logout">Вийти</string>
+    <string name="settings">Настройки</string>
+    <string-array name="theme_array">
+        <item>Темна</item>
+        <item>Світла</item>
+    </string-array>
+</resources>
