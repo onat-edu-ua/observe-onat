@@ -27,6 +27,23 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="text_main_activity">@color/text_main_activity_darktheme</item>
+        <item name="text_acount">@color/text_acount_darktheme</item>
+        <item name="background">@drawable/background_onat</item>
+        <item name="acount_icon">@drawable/account_icon</item>
+        <item name="home_icon">@drawable/home</item>
+        <item name="library_icon">@drawable/library_icon</item>
+        <item name="maps_icon">@drawable/maps_icon</item>
+        <item name="notification_icon">@drawable/notification</item>
+        <item name="search_icon">@drawable/search</item>
+        <item name="settings_icon">@drawable/settings</item>
+        <item name="teacher_icon">@drawable/teacher_icon</item>
+        <item name="button_text">@color/button_text_darktheme</item>
+        <item name="button_background">@color/button_background_darktheme</item>
+        <item name="background_header">@color/background_header_darktheme</item>
     </style>
 
     <style name="FullScreen.SearchView" parent="Widget.AppCompat.SearchView">
