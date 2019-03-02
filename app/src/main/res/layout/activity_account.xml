@@ -7,10 +7,10 @@
     android:background="@drawable/background_onat"
     tools:context=".AccountActivity">
     <TextView
-        android:background="#29ebebeb"
+        android:background="?attr/background_header"
         android:layout_width="match_parent"
         android:textSize="24sp"
-        android:textColor="#e8e8e8"
+        android:textColor="?attr/text_acount"
         android:textAlignment="center"
         android:paddingBottom="5dp"
         android:fontFamily="@font/fradm"
@@ -22,27 +22,27 @@
         <TextView
             android:layout_column="0"
             android:text="@string/course"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_column="1"
             android:text="5"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_column="0"
             android:layout_row="1"
             android:text="@string/departments"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_column="1"
             android:layout_row="1"
             android:text="Infocommunications"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </GridLayout>
@@ -56,5 +56,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:text="@string/payacad"
+        android:textColor="?attr/button_text"
+        android:backgroundTint="?attr/button_background"
         android:layout_height="wrap_content" />
 </LinearLayout>

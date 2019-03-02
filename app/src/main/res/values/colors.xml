@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="text_main_activity_darktheme">#adadad</color>
+    <color name="text_main_activity_lighttheme">#202020</color>
+    <color name="text_acount_darktheme">#e8e8e8</color>
+    <color name="text_acount_lighttheme">#01240e</color>
+    <color name="button_text_darktheme">#fff</color>
+    <color name="button_background_darktheme">#969696</color>
+    <color name="button_text_lighttheme">#0e0700</color>
+    <color name="button_background_lighttheme">#fff3f0</color>
+    <color name="background_header_darktheme">#29ebebeb</color>
+    <color name="background_header_lighttheme">#c1c1c1</color>
 </resources>

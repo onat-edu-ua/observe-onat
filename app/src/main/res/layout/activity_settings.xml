@@ -7,13 +7,13 @@
     android:background="@drawable/background_onat"
     tools:context=".SettingsActivity">
     <TextView
-        android:background="#29ebebeb"
+        android:background="?attr/background_header"
         android:layout_width="match_parent"
         android:text="@string/settings"
         android:textAlignment="center"
         android:fontFamily="@font/fradm"
         android:textSize="24sp"
-        android:textColor="#e8e8e8"
+        android:textColor="?attr/text_acount"
         android:paddingBottom="4dp"
         android:layout_height="wrap_content" />
     <LinearLayout
@@ -23,12 +23,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="@string/app_theme"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_width="wrap_content"
             android:text="Dark"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -36,12 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <CheckBox
-            android:buttonTint="#e8e8e8"
+            android:buttonTint="?attr/text_acount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:layout_width="wrap_content"
-            android:textColor="#e8e8e8"
+            android:textColor="?attr/text_acount"
             android:text="@string/save_cache"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -52,8 +52,8 @@
     <Button
         android:layout_gravity="center"
         android:text="@string/logout"
-        android:textColor="#fff"
-        android:backgroundTint="#969696"
+        android:textColor="?attr/button_text"
+        android:backgroundTint="?attr/button_background"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>
