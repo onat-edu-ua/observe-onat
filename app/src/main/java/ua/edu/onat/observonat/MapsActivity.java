@@ -31,10 +31,19 @@ public class MapsActivity extends FragmentActivity {
                         startY = event.getY();
                         break;
                     case MotionEvent.ACTION_UP:
+                        Log.v("startX", String.valueOf(startX));
+                        Log.v("startY", String.valueOf(startY));
                         float endX = event.getX();
                         float endY = event.getY();
-                        if (isAClick(startX, endX, startY, endY) && startX>188 && startX < 801 && startY<1690 && startY> 894) {
-                            startActivity(new Intent(MapsActivity.this, FullScreen.class));
+                        if (isAClick(startX, endX, startY, endY)) {
+                            if(startX>800 && startX < 1000 && startY<1690 && startY> 894) {
+                                startActivity(new Intent(MapsActivity.this, FullScreen.class));
+                            }
+                            if(startX > 130 && startX < 270 && startY > 360 && startY < 520) {
+                                Intent intent = new Intent(MapsActivity.this, FullScreen.class);
+                                intent.putExtra("laboratory_campus", true);
+                                startActivity(intent);
+                            }
                         }
                         break;
                 }

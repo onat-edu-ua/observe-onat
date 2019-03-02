@@ -18,8 +18,8 @@ public class FullScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen);
-        Bundle b = getIntent().getExtras();
-        int idOfResource = R.drawable.ic_floor_1;
+        boolean is_laboratory_campus = getIntent().getBooleanExtra("laboratory_campus", false);
+        int idOfResource = is_laboratory_campus ? R.drawable.ic_1stfloor_lab : R.drawable.ic_floor_1;
         TouchImageView floorFullScreen = findViewById(R.id.imageFloorFullScreen);
         floorFullScreen.setImageResource(idOfResource);
         floorFullScreen.setMaxZoom(6);
@@ -28,16 +28,16 @@ public class FullScreen extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioFloor1:
-                    floorFullScreen.setImageResource(R.drawable.ic_floor_1);
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_1stfloor_lab : R.drawable.ic_floor_1);
                     break;
                 case R.id.radioFloor2:
-                    floorFullScreen.setImageResource(R.drawable.ic_floor_2);
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     break;
                 case R.id.radioFloor3:
-                    floorFullScreen.setImageResource(R.drawable.ic_floor_3);
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab :R.drawable.ic_floor_3);
                     break;
                 case R.id.radioFloor4:
-                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
                     break;
                 default:
                     break;
