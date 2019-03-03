@@ -1,6 +1,8 @@
 package ua.edu.onat.observonat;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -12,12 +14,14 @@ import ua.edu.onat.observonat.Helpers.TouchImageView;
 
 public class MapsActivity extends FragmentActivity {
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
         TouchImageView mapBigPic = findViewById(R.id.mapBigPic);
+
         mapBigPic.setZoom(3);
         mapBigPic.setOnTouchListener(new View.OnTouchListener() {
             private int CLICK_ACTION_THRESHOLD = 5;
@@ -31,15 +35,14 @@ public class MapsActivity extends FragmentActivity {
                         startY = event.getY();
                         break;
                     case MotionEvent.ACTION_UP:
-                        Log.v("startX", String.valueOf(startX));
-                        Log.v("startY", String.valueOf(startY));
+                        PointF coordinates = mapBigPic.transformCoordTouchToBitmap(startX,startY,true);
                         float endX = event.getX();
                         float endY = event.getY();
                         if (isAClick(startX, endX, startY, endY)) {
-                            if(startX>800 && startX < 1000 && startY<1690 && startY> 894) {
+                            if(coordinates.x > 41 && coordinates.x < 56 && coordinates.y > 42 && coordinates.y < 59) {
                                 startActivity(new Intent(MapsActivity.this, FullScreen.class));
                             }
-                            if(startX > 130 && startX < 270 && startY > 360 && startY < 520) {
+                            if(coordinates.x > 2 && coordinates.x < 6 && coordinates.y > 2 && coordinates.y < 10) {
                                 Intent intent = new Intent(MapsActivity.this, FullScreen.class);
                                 intent.putExtra("laboratory_campus", true);
                                 startActivity(intent);

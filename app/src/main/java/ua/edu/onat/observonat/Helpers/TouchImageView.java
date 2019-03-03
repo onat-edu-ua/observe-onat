@@ -63,7 +63,7 @@ public class TouchImageView extends ImageView {
     // MTRANS_X and MTRANS_Y are the other values used. prevMatrix is the matrix
     // saved prior to the screen rotating.
     //
-	private Matrix matrix, prevMatrix;
+	public Matrix matrix, prevMatrix;
 
     private static enum State { NONE, DRAG, ZOOM, FLING, ANIMATE_ZOOM };
     private State state;
@@ -1067,7 +1067,7 @@ public class TouchImageView extends ImageView {
      * 			to the bounds of the bitmap size.
      * @return Coordinates of the point touched, in the coordinate system of the original drawable.
      */
-    private PointF transformCoordTouchToBitmap(float x, float y, boolean clipToBitmap) {
+    public PointF transformCoordTouchToBitmap(float x, float y, boolean clipToBitmap) {
          matrix.getValues(m);
          float origW = getDrawable().getIntrinsicWidth();
          float origH = getDrawable().getIntrinsicHeight();
