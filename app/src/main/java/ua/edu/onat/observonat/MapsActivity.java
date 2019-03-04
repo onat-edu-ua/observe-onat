@@ -2,14 +2,22 @@ package ua.edu.onat.observonat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.SearchView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import ua.edu.onat.observonat.Helpers.CabinetsArrayAdapter;
 import ua.edu.onat.observonat.Helpers.TouchImageView;
 
 public class MapsActivity extends FragmentActivity {
@@ -36,8 +44,6 @@ public class MapsActivity extends FragmentActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         PointF coordinates = mapBigPic.transformCoordTouchToBitmap(startX,startY,true);
-                        Log.v("Coordinate x", String.valueOf(coordinates.x));
-                        Log.v("Coordinate y", String.valueOf(coordinates.y));
                         float endX = event.getX();
                         float endY = event.getY();
                         if (isAClick(startX, endX, startY, endY)) {
@@ -61,21 +67,16 @@ public class MapsActivity extends FragmentActivity {
                 return !(differenceX > CLICK_ACTION_THRESHOLD/* =5 */ || differenceY > CLICK_ACTION_THRESHOLD);
             }
         });
-        SearchView searchView = findViewById(R.id.searchMap);
-        searchView.setFocusable(false);
-        searchView.setIconified(false);
-        searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                Log.v("Search", s);
-                return false;
-            }
+        String[] cities = {"101 (главный)" , "102 (главный)" , "103", "104", "105", "106", "107", "108"};
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.searchMap);
+        CabinetsArrayAdapter  adapter =
+                new CabinetsArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, new ArrayList<>(Arrays.asList(cities)));
+        autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView.setThreshold(1);
+        autoCompleteTextView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(MapsActivity.this, FullScreen.class);
+            intent.putExtra("cabinet", (String)adapterView.getItemAtPosition(i));
+            startActivity(intent);
         });
     }
 }

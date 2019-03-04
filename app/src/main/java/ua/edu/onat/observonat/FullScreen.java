@@ -6,6 +6,7 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -31,8 +32,19 @@ public class FullScreen extends AppCompatActivity {
         floorFullScreen.setMaxZoom(6);
         floorFullScreen.setMinZoom(1);
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
-        ArrayList<PointF> points = new ArrayList<>(Arrays.asList(new PointF(10,10), new PointF(10,100), new PointF(100,100)));
-        floorFullScreen.addPointsToImage(points);
+        String cabinet = getIntent().getStringExtra("cabinet");
+        if(cabinet != null) {
+            ArrayList<PointF> points = new ArrayList<>();
+            switch(cabinet) {
+                case "101 (главный)":
+                    points = new ArrayList<>(Arrays.asList(new PointF(10,10), new PointF(10,100), new PointF(100,100)));
+                    break;
+                case "102 (главный)":
+                    points =  new ArrayList<>(Arrays.asList(new PointF(80,10), new PointF(80,80), new PointF(120,80)));
+            }
+            floorFullScreen.addPointsToImage(points);
+        }
+
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioFloor1:
