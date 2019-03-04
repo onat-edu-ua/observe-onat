@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -71,7 +73,15 @@ public class LibraryActivity extends AppCompatActivity {
             data.putExtras(b);
             startActivity(data);
         });
+        Button searchButton = findViewById(R.id.search_methods_button);
+        searchButton.setOnClickListener(view -> {
+            EditText searchQuery = findViewById(R.id.methodical_string_search);
+            Intent data = new Intent(getBaseContext(), DepartmentActivity.class);
+            Bundle b = new Bundle();
+            b.putBoolean("is_query_string", true);
+            b.putString("query_string", searchQuery.getText().toString());
+            data.putExtras(b);
+            startActivity(data);
+        });
     }
-
-
 }

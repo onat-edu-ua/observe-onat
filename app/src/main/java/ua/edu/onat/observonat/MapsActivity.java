@@ -1,23 +1,35 @@
 package ua.edu.onat.observonat;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PointF;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.SearchView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import ua.edu.onat.observonat.Helpers.CabinetsArrayAdapter;
 import ua.edu.onat.observonat.Helpers.TouchImageView;
 
 public class MapsActivity extends FragmentActivity {
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
         TouchImageView mapBigPic = findViewById(R.id.mapBigPic);
+
         mapBigPic.setZoom(3);
         mapBigPic.setOnTouchListener(new View.OnTouchListener() {
             private int CLICK_ACTION_THRESHOLD = 5;
@@ -31,15 +43,14 @@ public class MapsActivity extends FragmentActivity {
                         startY = event.getY();
                         break;
                     case MotionEvent.ACTION_UP:
-                        Log.v("startX", String.valueOf(startX));
-                        Log.v("startY", String.valueOf(startY));
+                        PointF coordinates = mapBigPic.transformCoordTouchToBitmap(startX,startY,true);
                         float endX = event.getX();
                         float endY = event.getY();
                         if (isAClick(startX, endX, startY, endY)) {
-                            if(startX>800 && startX < 1000 && startY<1690 && startY> 894) {
+                            if(coordinates.x > 41 && coordinates.x < 65 && coordinates.y > 42 && coordinates.y < 68) {
                                 startActivity(new Intent(MapsActivity.this, FullScreen.class));
                             }
-                            if(startX > 130 && startX < 270 && startY > 360 && startY < 520) {
+                            if(coordinates.x > 2 && coordinates.x < 6 && coordinates.y > 2 && coordinates.y < 10) {
                                 Intent intent = new Intent(MapsActivity.this, FullScreen.class);
                                 intent.putExtra("laboratory_campus", true);
                                 startActivity(intent);
@@ -56,21 +67,16 @@ public class MapsActivity extends FragmentActivity {
                 return !(differenceX > CLICK_ACTION_THRESHOLD/* =5 */ || differenceY > CLICK_ACTION_THRESHOLD);
             }
         });
-        SearchView searchView = findViewById(R.id.searchMap);
-        searchView.setFocusable(false);
-        searchView.setIconified(false);
-        searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                Log.v("Search", s);
-                return false;
-            }
+        String[] cities = {"101 (главный)" , "102 (главный)" , "103", "104", "105", "106", "107", "108"};
+        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.searchMap);
+        CabinetsArrayAdapter  adapter =
+                new CabinetsArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, new ArrayList<>(Arrays.asList(cities)));
+        autoCompleteTextView.setAdapter(adapter);
+        autoCompleteTextView.setThreshold(1);
+        autoCompleteTextView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(MapsActivity.this, FullScreen.class);
+            intent.putExtra("cabinet", (String)adapterView.getItemAtPosition(i));
+            startActivity(intent);
         });
     }
 }
