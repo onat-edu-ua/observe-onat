@@ -4,10 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.content.SharedPreferences;
+
 import eightbitlab.com.blurview.BlurView;
 import eightbitlab.com.blurview.RenderScriptBlur;
+import ua.edu.onat.observonat.Helpers.CustomAttrsFactory;
+import android.support.v4.view.LayoutInflaterCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.settings).setOnClickListener(v-> {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
         });
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
+
+
     }
 
     void createView(int id, Class<?> activity)
@@ -36,4 +46,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals("theme")) {
+            recreate();
+        }
+
+
+    }
 }
