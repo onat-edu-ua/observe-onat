@@ -1,6 +1,7 @@
 package ua.edu.onat.observonat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.PointF;
@@ -23,6 +24,10 @@ public class FullScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_full_screen);
         boolean is_laboratory_campus = getIntent().getBooleanExtra("laboratory_campus", false);

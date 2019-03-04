@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         createView(R.id.maps_container, MapsActivity.class);
@@ -24,12 +28,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         findViewById(R.id.settings).setOnClickListener(v-> {
             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
         });
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
-        int currTheme = pref.getInt("theme", R.style.FullScreen);
-        if(currTheme!=R.style.FullScreen)
-            setTheme(currTheme);
-
-
     }
 
     void createView(int id, Class<?> activity)

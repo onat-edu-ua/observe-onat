@@ -2,6 +2,7 @@ package ua.edu.onat.observonat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -25,6 +26,10 @@ public class MapsActivity extends FragmentActivity {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 

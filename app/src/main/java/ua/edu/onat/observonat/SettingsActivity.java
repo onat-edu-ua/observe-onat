@@ -6,6 +6,8 @@ import ua.edu.onat.observonat.Helpers.NDSpinner;
 import java.util.ArrayList;
 import java.util.Arrays;
 import ua.edu.onat.observonat.Helpers.CustomSpinnerAdapter;
+
+import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.view.View;
@@ -18,13 +20,14 @@ public class SettingsActivity extends AppCompatActivity {
     boolean onload_theme = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
-        Integer currTheme = pref.getInt("theme", R.style.FullScreen);
-        if(currTheme!=R.style.FullScreen)
-            setTheme(currTheme);
+
         NDSpinner themeSelector = findViewById(R.id.theme_selector);
 
         final String[] themesArray = getResources().getStringArray(R.array.theme_array);

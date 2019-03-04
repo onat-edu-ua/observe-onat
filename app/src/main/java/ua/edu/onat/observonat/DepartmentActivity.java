@@ -3,6 +3,7 @@ package ua.edu.onat.observonat;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -45,6 +46,10 @@ public class DepartmentActivity extends AppCompatActivity {
     String methodUrl = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("ONATSettings", 0);
+        int currTheme = pref.getInt("theme", R.style.FullScreen);
+        if(currTheme!=R.style.FullScreen)
+            setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department);
         ListView methods = findViewById(R.id.methods);
