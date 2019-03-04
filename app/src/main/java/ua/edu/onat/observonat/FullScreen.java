@@ -2,6 +2,8 @@ package ua.edu.onat.observonat;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.PointF;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import ua.edu.onat.observonat.Helpers.TouchImageView;
 
@@ -25,6 +31,8 @@ public class FullScreen extends AppCompatActivity {
         floorFullScreen.setMaxZoom(6);
         floorFullScreen.setMinZoom(1);
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        ArrayList<PointF> points = new ArrayList<>(Arrays.asList(new PointF(10,10), new PointF(10,100), new PointF(100,100)));
+        floorFullScreen.addPointsToImage(points);
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioFloor1:

@@ -36,10 +36,12 @@ public class MapsActivity extends FragmentActivity {
                         break;
                     case MotionEvent.ACTION_UP:
                         PointF coordinates = mapBigPic.transformCoordTouchToBitmap(startX,startY,true);
+                        Log.v("Coordinate x", String.valueOf(coordinates.x));
+                        Log.v("Coordinate y", String.valueOf(coordinates.y));
                         float endX = event.getX();
                         float endY = event.getY();
                         if (isAClick(startX, endX, startY, endY)) {
-                            if(coordinates.x > 41 && coordinates.x < 56 && coordinates.y > 42 && coordinates.y < 59) {
+                            if(coordinates.x > 41 && coordinates.x < 65 && coordinates.y > 42 && coordinates.y < 68) {
                                 startActivity(new Intent(MapsActivity.this, FullScreen.class));
                             }
                             if(coordinates.x > 2 && coordinates.x < 6 && coordinates.y > 2 && coordinates.y < 10) {

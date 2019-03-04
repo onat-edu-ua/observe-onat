@@ -40,6 +40,8 @@ import android.widget.ImageView;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
+import java.util.ArrayList;
+
 public class TouchImageView extends ImageView {
 	
 	private static final String DEBUG = "DEBUG";
@@ -81,7 +83,7 @@ public class TouchImageView extends ImageView {
     
     private boolean imageRenderedAtLeastOnce;
     private boolean onDrawReady;
-    
+
     private ZoomVariables delayedZoomVariables;
 
     //
@@ -99,6 +101,9 @@ public class TouchImageView extends ImageView {
     private GestureDetector.OnDoubleTapListener doubleTapListener = null;
     private OnTouchListener userTouchListener = null;
     private OnTouchImageViewListener touchImageViewListener = null;
+
+    // Наши точки для карты
+    private ArrayList<PointF> mapPoints = null;
 
     public TouchImageView(Context context) {
         super(context);
@@ -135,6 +140,7 @@ public class TouchImageView extends ImageView {
         setScaleType(ScaleType.MATRIX);
         setState(State.NONE);
         onDrawReady = false;
+        mapPoints = new ArrayList<>();
         super.setOnTouchListener(new PrivateOnTouchListener());
     }
 
@@ -276,6 +282,10 @@ public class TouchImageView extends ImageView {
 
       	super.onRestoreInstanceState(state);
     }
+
+    public void addPointsToImage(ArrayList<PointF> points) {
+        mapPoints = points;
+    }
     
     @Override
     protected void onDraw(Canvas canvas) {
@@ -288,7 +298,13 @@ public class TouchImageView extends ImageView {
     	// Вот здесь рисуем красную линию
     	Paint paint = new Paint();
     	paint.setColor(Color.RED);
-    	canvas.drawLine(0,0,200,500, paint);
+    	if(mapPoints.size() > 0) {
+    	    for(int i =0;i < mapPoints.size() - 1; i++) {
+                PointF start = transformCoordBitmapToTouch(mapPoints.get(i).x,mapPoints.get(i).y);
+                PointF end = transformCoordBitmapToTouch(mapPoints.get(i+1).x,mapPoints.get(i+1).y);
+                canvas.drawLine( start.x, start.y,end.x, end.y, paint);
+            }
+        }
     	super.onDraw(canvas);
     }
     
