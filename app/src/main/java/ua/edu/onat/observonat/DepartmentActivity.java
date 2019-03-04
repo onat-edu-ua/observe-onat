@@ -51,8 +51,13 @@ public class DepartmentActivity extends AppCompatActivity {
         RequestQueue queue = Volley.newRequestQueue(this);
         Intent intent = getIntent();
         String valueid = intent.getStringExtra("departmentId");
-        if (valueid.equals(null)) valueid = "0";
+        if (valueid == null) valueid = "0";
         String url ="https://metod.onat.edu.ua/metods?search_query=&department_id=" + valueid;
+        boolean have_search_text = intent.getBooleanExtra("is_query_string", false);
+        if(have_search_text) {
+            String queryString = intent.getStringExtra("query_string");
+            url ="https://metod.onat.edu.ua/metods?search_query=" + queryString;
+        }
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 response -> {
