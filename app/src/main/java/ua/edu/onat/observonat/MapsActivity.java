@@ -72,7 +72,8 @@ public class MapsActivity extends FragmentActivity {
                 return !(differenceX > CLICK_ACTION_THRESHOLD/* =5 */ || differenceY > CLICK_ACTION_THRESHOLD);
             }
         });
-        String[] cities = {"101 (главный)" , "102 (главный)" , "103", "104", "105", "106", "107", "108"};
+        String[] cities = {"101 (главный)" , "102 (главный)" , "102-A", "103", "104", "105", "105-A", "106", "106-A", "107", "107-A", "107-B", "108", "109",
+                "110", "111-1/2", "111-3", "113/113-A", "114/114-A", "115", "116", "117/117-A", "118", "119", "120", "122", "123", "124"};
         AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.searchMap);
         CabinetsArrayAdapter  adapter =
                 new CabinetsArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, new ArrayList<>(Arrays.asList(cities)));
