@@ -9,10 +9,21 @@
         android:src="@drawable/ic_highres"
         android:id="@+id/mapBigPic"
         android:layout_height="match_parent" />
-    <AutoCompleteTextView
-        android:id="@+id/searchMap"
-        android:hint="Type a cabinet"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search_icon"
+            android:layout_height="15dp" />
+        <AutoCompleteTextView
+            android:id="@+id/searchMap"
+            android:hint="Type a cabinet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
 </FrameLayout>

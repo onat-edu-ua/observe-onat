@@ -13,5 +13,6 @@
     <attr name="teacher_icon" format="reference"/>
     <attr name="button_text" format="reference"/>
     <attr name="button_background" format="reference"/>
+    <attr name="background_app" format="reference"/>
     <attr name="background_header" format="reference"/>
 </resources>

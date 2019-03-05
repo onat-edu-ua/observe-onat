@@ -48,6 +48,7 @@
         <item name="button_text">@color/button_text_darktheme</item>
         <item name="button_background">@color/button_background_darktheme</item>
         <item name="background_header">@color/background_header_darktheme</item>
+        <item name="background_app">@drawable/background_onat</item>
     </style>
 
     <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -72,6 +73,7 @@
         <item name="button_text">@color/button_text_lighttheme</item>
         <item name="button_background">@color/button_background_lighttheme</item>
         <item name="background_header">@color/background_header_lighttheme</item>
+        <item name="background_app">@drawable/background_light</item>
     </style>
 
     <style name="FullScreen.SearchView" parent="Widget.AppCompat.SearchView">
