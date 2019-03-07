@@ -32,7 +32,6 @@ public class TeacherDepartmentActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
-        //wpb_column vc_column_container vc_col-sm-8
         String url ="https://onat.edu.ua/instituti/ik-and-pi/volz/sklad-kafedry_volz/";
         try {
             Document doc = Jsoup.connect(url).get();
@@ -40,6 +39,10 @@ public class TeacherDepartmentActivity extends AppCompatActivity {
             header.attr("style", "display:none");
             Elements pageheading = doc.select(".page-heading");
             pageheading.attr("style", "display:none");
+            Elements footer = doc.select("footer");
+            footer.attr("style", "display:none");
+            Elements navigationbottom = doc.select(".wpb_column.vc_column_container.vc_col-sm-4");
+            navigationbottom.attr("style", "display:none");
             WebView webview = findViewById(R.id.webview_teacher_department);
             webview.loadData(doc.html(), "text/html", "UTF-8");
         } catch (Exception ex) {
