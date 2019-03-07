@@ -23,10 +23,10 @@
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         />
-    <SearchView
+    <ListView
         android:theme="@style/FullScreen.SearchView"
         android:layout_marginLeft="20dp"
-        android:queryHint="@string/search_hint"
+        android:id="@+id/teacher_departments_list"
         android:layout_marginRight="20dp"
         android:layout_marginTop="46dp"
         android:layout_width="match_parent"

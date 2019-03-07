@@ -1,11 +1,13 @@
 package ua.edu.onat.observonat;
 
-import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class TeachersActivity extends AppCompatActivity {
 
@@ -17,19 +19,13 @@ public class TeachersActivity extends AppCompatActivity {
             setTheme(currTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers);
-        handleIntent(getIntent());
+        ListView teacher_departments_list = findViewById(R.id.teacher_departments_list);
+        String[] teachers_deps = {"Кафедра ВОЛС", "Кафедра вышмата", "Кафедра ещё какой-то херни"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teachers_deps);
+        teacher_departments_list.setAdapter(adapter);
+        teacher_departments_list.setOnItemClickListener(
+                (adapterView, view, i, l) -> startActivity(new Intent(getApplicationContext(), TeacherDepartmentActivity.class))
+        );
     }
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        setIntent(intent);
-        handleIntent(intent);
-    }
-
-    private void handleIntent(Intent intent) {
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-            Log.v("query", query);
-        }
-    }
 }
