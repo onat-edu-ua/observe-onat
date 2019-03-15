@@ -42,7 +42,7 @@ public class FullScreen extends AppCompatActivity {
             ArrayList<PointF> points = new ArrayList<>();
             switch(cabinet) {
                 case "101 (главный)":
-                    points = new ArrayList<>(Arrays.asList(new PointF(110,12), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points = new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(41,23), new PointF(41, 12), new PointF(42, 12),  new PointF(42, 7)));
                     break;
                 case "102 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(110,17), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));

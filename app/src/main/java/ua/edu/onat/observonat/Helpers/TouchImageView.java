@@ -30,6 +30,7 @@ import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -45,6 +46,7 @@ import java.util.ArrayList;
 public class TouchImageView extends ImageView {
 	
 	private static final String DEBUG = "DEBUG";
+	private int nexus_dpi = 420;
 	
 	//
 	// SuperMin and SuperMax multipliers. Determine how much the image can be
@@ -298,11 +300,15 @@ public class TouchImageView extends ImageView {
     	// Вот здесь рисуем красную линию
     	Paint paint = new Paint();
     	paint.setColor(Color.RED);
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        Log.v("X dpi", String.valueOf(metrics.xdpi));
+        Log.v("Y dpi", String.valueOf(metrics.ydpi));
+        Log.v("Density", String.valueOf(metrics.density + 0.5f));
     	if(mapPoints.size() > 0) {
     	    for(int i =0;i < mapPoints.size() - 1; i++) {
-                PointF start = transformCoordBitmapToTouch(mapPoints.get(i).x,mapPoints.get(i).y);
-                PointF end = transformCoordBitmapToTouch(mapPoints.get(i+1).x,mapPoints.get(i+1).y);
-                canvas.drawLine( start.x, start.y,end.x, end.y, paint);
+                PointF start = transformCoordBitmapToTouch((int)(metrics.density *mapPoints.get(i).x + 0.5) ,(int)(metrics.density *mapPoints.get(i).y + 0.5));
+                PointF end = transformCoordBitmapToTouch((int)(metrics.density *mapPoints.get(i+1).x + 0.5),(int)(metrics.density *mapPoints.get(i+1).y + 0.5));
+                canvas.drawLine(start.x,start.y,end.x,end.y, paint);
             }
         }
     	super.onDraw(canvas);
