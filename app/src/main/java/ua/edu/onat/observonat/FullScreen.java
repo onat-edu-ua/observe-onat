@@ -45,85 +45,88 @@ public class FullScreen extends AppCompatActivity {
                     points = new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(41,23), new PointF(41, 12), new PointF(42, 12),  new PointF(42, 7)));
                     break;
                 case "102 (главный)":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,17), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 6)));
                     break;
                 case "102-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,22), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 8)));
                     break;
                 case "103":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,29), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 11)));
+                    break;
+                case "104/1-2":
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
                 case "104":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,36), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
                 case "105-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,36), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
                 case "105":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(110,40), new PointF(110,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
                 case "106":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(95,55), new PointF(95,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(37,23), new PointF(37, 22)));
                     break;
                 case "106-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(90,55), new PointF(90,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(34,23), new PointF(34, 22)));
                     break;
                 case "107":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(86,55), new PointF(86,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(33,23), new PointF(33, 22)));
                     break;
                 case "107-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(79,55), new PointF(79,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(30,23), new PointF(30, 22)));
                     break;
                 case "107-B":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(46,55), new PointF(46,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(18,23), new PointF(18, 22)));
                     break;
                 case "108":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(40,55), new PointF(40,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(15,23), new PointF(15, 22)));
                     break;
                 case "109":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(33,55), new PointF(33,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(13,23), new PointF(13, 22)));
                     break;
                 case "110":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(19,75), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 28)));
                     break;
                 case "111-1/2":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 71), new PointF(19,71), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 27), new PointF(6, 27)));
                     break;
                 case "111-3":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 71), new PointF(19,71), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 27), new PointF(6, 27)));
                     break;
                 case "113/113-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 50), new PointF(19,50), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 19), new PointF(6, 19)));
                     break;
                 case "114/114-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 42), new PointF(19,42), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 16), new PointF(6, 16)));
                     break;
                 case "115":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 39), new PointF(19,39), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 15), new PointF(6, 15)));
                     break;
                 case "116":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 35), new PointF(19,35), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 13), new PointF(6, 13)));
                     break;
                 case "117/117-A":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 30), new PointF(19,30), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 11), new PointF(6, 11)));
                     break;
                 case "118":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 25), new PointF(17,25), new PointF(17,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 10), new PointF(6, 10)));
                     break;
                 case "119":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(15, 21), new PointF(17,21), new PointF(17,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 8), new PointF(6, 8)));
                     break;
                 case "120":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(17,19), new PointF(17,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(6,23), new PointF(6, 7)));
                     break;
                 case "122":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(22, 39), new PointF(19,39), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 15), new PointF(8, 15)));
                     break;
                 case "123":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(22, 43), new PointF(19,43), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 16), new PointF(8, 16)));
                     break;
                 case "124":
-                    points =  new ArrayList<>(Arrays.asList(new PointF(22, 47), new PointF(19,47), new PointF(19,60), new PointF(65,60), new PointF(65, 70)));
+                    points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 18), new PointF(8, 18)));
                     break;
             }
             floorFullScreen.addPointsToImage(points);
