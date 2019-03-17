@@ -8,11 +8,11 @@
     <string name="home_top_bar">Начало</string>
     <string name="navigation_title">Навигация</string>
     <string name="library_title">Библиотека</string>
-    <string name="account_title">Аккаунт</string>
     <string name="departments">Институт</string>
     <string name="payacad">Заплатить за академию</string>
     <string name="course">Курс:</string>
     <string name="floor">Этаж</string>
+    <string name="news_title">Новости</string>
     <string name="app_theme">Тема приложения</string>
     <string name="save_cache">Сохранять в кэш</string>
     <string name="logout">Выйти</string>

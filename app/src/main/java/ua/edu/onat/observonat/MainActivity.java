@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         createView(R.id.maps_container, MapsActivity.class);
-        createView(R.id.account_container, AccountActivity.class);
+        createView(R.id.account_container, NewsActivity.class);
         createView(R.id.teacher_container, TeachersActivity.class);
         createView(R.id.library_container, LibraryActivity.class);
         findViewById(R.id.settings).setOnClickListener(v-> {

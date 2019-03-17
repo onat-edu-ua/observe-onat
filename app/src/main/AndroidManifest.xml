@@ -20,7 +20,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-        <activity android:name=".TeacherDepartmentActivity"></activity>
+        <activity android:name=".NewsActivity"></activity>
+        <activity android:name=".TeacherDepartmentActivity" />
         <activity android:name=".DepartmentActivity" />
         <activity android:name=".MainActivity" />
         <!--

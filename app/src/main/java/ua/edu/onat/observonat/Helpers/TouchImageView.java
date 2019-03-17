@@ -301,13 +301,10 @@ public class TouchImageView extends ImageView {
     	Paint paint = new Paint();
     	paint.setColor(Color.RED);
         DisplayMetrics metrics = getResources().getDisplayMetrics();
-        Log.v("X dpi", String.valueOf(metrics.xdpi));
-        Log.v("Y dpi", String.valueOf(metrics.ydpi));
-        Log.v("Density", String.valueOf(metrics.density + 0.5f));
     	if(mapPoints.size() > 0) {
     	    for(int i =0;i < mapPoints.size() - 1; i++) {
-                PointF start = transformCoordBitmapToTouch((int)(metrics.density *mapPoints.get(i).x + 0.5) ,(int)(metrics.density *mapPoints.get(i).y + 0.5));
-                PointF end = transformCoordBitmapToTouch((int)(metrics.density *mapPoints.get(i+1).x + 0.5),(int)(metrics.density *mapPoints.get(i+1).y + 0.5));
+                PointF start = transformCoordBitmapToTouch((int)(metrics.density *mapPoints.get(i).x + 0.5) ,(int)(metrics.density  *mapPoints.get(i).y + 0.5));
+                PointF end = transformCoordBitmapToTouch((int)(metrics.density * mapPoints.get(i+1).x + 0.5),(int)(metrics.density *mapPoints.get(i+1).y + 0.5));
                 canvas.drawLine(start.x,start.y,end.x,end.y, paint);
             }
         }

@@ -3,12 +3,12 @@
     <string name="app_name">ObservONAT</string>
     <string name="title_activity_maps">Мапа</string>
     <string name="teachers_title">Викладачі</string>
+    <string name="news_title">Новини</string>
     <string name="search_hint">Пошук…</string>
     <string name="notification_description">Повідомлення</string>
     <string name="home_top_bar">Додому</string>
     <string name="navigation_title">Навігація</string>
     <string name="library_title">Бібліотека</string>
-    <string name="account_title">Аккаунт</string>
     <string name="departments">Інститут:</string>
     <string name="payacad">Сплатити за академію</string>
     <string name="course">Курс:</string>
