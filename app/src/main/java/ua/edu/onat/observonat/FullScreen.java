@@ -300,8 +300,207 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 11), new PointF(4, 11)));
                     break;
+                case "301":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 3)));
+                    break;
+                case "302":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 4), new PointF(31, 4)));
+                    break;
+                case "303":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 5), new PointF(31, 5)));
+                    break;
+                case "304":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 7), new PointF(31, 7)));
+                    break;
+                case "305":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 8), new PointF(31, 8)));
+                    break;
+                case "306":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 11), new PointF(31, 11)));
+                    break;
+                case "307":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 12), new PointF(31, 12)));
+                    break;
+                case "308":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(31,16)));
+                    break;
+                case "309":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 17)));
+                    break;
+                case "310":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 6), new PointF(29, 6)));
+                    break;
+                case "311":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 7), new PointF(29, 7)));
+                    break;
+                case "312-A":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 8), new PointF(29, 8)));
+                    break;
+                case "312":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 9), new PointF(29, 9)));
+                    break;
+                case "313":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 11), new PointF(29, 11)));
+                    break;
+                case "315":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(26,16), new PointF(26, 14)));
+                    break;
+                case "316":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(24,16), new PointF(24, 14)));
+                    break;
+                case "317":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(23,16), new PointF(23, 14)));
+                    break;
+                case "318":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(21,16), new PointF(21, 14)));
+                    break;
+                case "319":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(19,16), new PointF(19, 12)));
+                    break;
+                case "320":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(13,16), new PointF(13, 12)));
+                    break;
+                case "321":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(11,16), new PointF(11, 14)));
+                    break;
+                case "322":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(9,16), new PointF(9, 14)));
+                    break;
+                case "323":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 18)));
+                    break;
+                case "324":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(2,16)));
+                    break;
+                case "325":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 14), new PointF(2, 14)));
+                    break;
+                case "325-A":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(2, 10)));
+                    break;
+                case "326":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 7), new PointF(2, 7)));
+                    break;
+                case "330":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 4), new PointF(2, 4)));
+                    break;
+                case "331":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 3)));
+                    break;
+                case "328":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 6), new PointF(4, 6)));
+                    break;
+                case "329":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 7), new PointF(4, 7)));
+                    break;
+                case "332":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 8), new PointF(4, 8)));
+                    break;
+                case "333":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 9), new PointF(4, 9)));
+                    break;
+                case "334":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(4, 10)));
+                    break;
+                case "335":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    radioGroup.check(R.id.radioFloor3);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 12), new PointF(4, 12)));
+                    break;
 
-
+                case "402":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    radioGroup.check(R.id.radioFloor4);
+                    points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(5,12), new PointF(5, 11)));
+                    break;
+                case "402-A":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    radioGroup.check(R.id.radioFloor4);
+                    points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(4,12), new PointF(4, 13)));
+                    break;
+                case "403":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    radioGroup.check(R.id.radioFloor4);
+                    points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(16.6f,12)));
+                    break;
+                case "403-A":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    radioGroup.check(R.id.radioFloor4);
+                    points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(18.6f,12), new PointF(19, 13)));
+                    break;
+                case "404":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    radioGroup.check(R.id.radioFloor4);
+                    points = new ArrayList<>(Arrays.asList(new PointF(7.6f,15), new PointF(7.6f,12), new PointF(15, 12), new PointF(15, 15)));
+                    break;
 
 
             }
