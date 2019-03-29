@@ -128,6 +128,19 @@ public class FullScreen extends AppCompatActivity {
                 case "124":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 18), new PointF(8, 18)));
                     break;
+
+                // Пиздец здесь будет говнокод. Вот пусть это будет на сервере, а то места дохера
+                case "201 (главный)":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
+                    radioGroup.check(R.id.radioFloor2);
+                    points = new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 18), new PointF(8, 18)));
+                    break;
+                case "202 (главный)":
+                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
+                    radioGroup.check(R.id.radioFloor2);
+                    points = new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 16), new PointF(8, 16)));
+
+                    break;
             }
             floorFullScreen.addPointsToImage(points);
         }
@@ -135,15 +148,23 @@ public class FullScreen extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioFloor1:
+                    ArrayList<PointF> points = new ArrayList<>();
+                    floorFullScreen.addPointsToImage(points);
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_1stfloor_lab : R.drawable.ic_floor_1);
                     break;
                 case R.id.radioFloor2:
+                    points = new ArrayList<>();
+                    floorFullScreen.addPointsToImage(points);
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     break;
                 case R.id.radioFloor3:
+                    points = new ArrayList<>();
+                    floorFullScreen.addPointsToImage(points);
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab :R.drawable.ic_floor_3);
                     break;
                 case R.id.radioFloor4:
+                    points = new ArrayList<>();
+                    floorFullScreen.addPointsToImage(points);
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
                     break;
                 default:
