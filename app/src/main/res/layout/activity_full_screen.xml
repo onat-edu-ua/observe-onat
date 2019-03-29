@@ -65,6 +65,17 @@
                android:layout_width="wrap_content"
                android:text="4"
                android:layout_height="wrap_content" />
+           <RadioButton
+               android:layout_width="wrap_content"
+               android:id="@+id/radioFloor5"
+               android:visibility="gone"
+               android:layout_height="wrap_content" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="5"
+               android:id="@+id/text_5_floor"
+               android:visibility="gone"
+               android:layout_height="wrap_content" />
        </RadioGroup>
    </LinearLayout>
 </RelativeLayout>

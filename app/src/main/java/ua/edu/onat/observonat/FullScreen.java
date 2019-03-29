@@ -507,6 +507,11 @@ public class FullScreen extends AppCompatActivity {
             floorFullScreen.addPointsToImage(points);
         }
 
+        if(is_laboratory_campus) {
+            findViewById(R.id.radioFloor5).setVisibility(View.VISIBLE);
+            findViewById(R.id.text_5_floor).setVisibility(View.VISIBLE);
+        }
+
         radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.radioFloor1:
@@ -528,6 +533,11 @@ public class FullScreen extends AppCompatActivity {
                     points = new ArrayList<>();
                     floorFullScreen.addPointsToImage(points);
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    break;
+                case R.id.radioFloor5:
+                    points = new ArrayList<>();
+                    floorFullScreen.addPointsToImage(points);
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
                     break;
                 default:
                     break;
