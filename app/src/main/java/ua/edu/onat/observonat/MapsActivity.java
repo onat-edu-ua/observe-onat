@@ -74,7 +74,7 @@ public class MapsActivity extends FragmentActivity {
         });
         String[] cabinets = {
                 // 1 этаж
-                "101 (главный)" , "102 (главный)" , "102-A", "103", "104", "104/1-2", "105", "105-A", "106", "106-A", "107", "107-A", "107-B", "108", "109",
+                "101 (главный)" , "102 (главный)" , "102-A (главный)", "103 (главный)", "104 (главный)", "104/1-2 (главный)", "105 (главный)", "105-A (главный)", "106", "106-A", "107", "107-A", "107-B", "108", "109",
                 "110", "111-1/2", "111-3", "113/113-A", "114/114-A", "115", "116", "117/117-A", "118", "119", "120", "122", "123", "124",
 
                 // 2 этаж
@@ -86,8 +86,16 @@ public class MapsActivity extends FragmentActivity {
                 "320", "321", "322", "323", "324", "325", "325-A", "326", "328", "329", "330", "331", "332", "333", "334", "335",
 
                 // 4th floor
-                "402", "402-A", "403", "403-A", "404"
+                "402", "402-A", "403", "403-A", "404",
+
+                /*
+                второй лаб
+                 */
+
+                //1
+                "101 (2 лаб)", "102 (2 лаб)"
         };
+        Log.v("Length", String.valueOf(cabinets.length));
         AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.searchMap);
         CabinetsArrayAdapter  adapter =
                 new CabinetsArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, new ArrayList<>(Arrays.asList(cabinets)));
@@ -95,7 +103,12 @@ public class MapsActivity extends FragmentActivity {
         autoCompleteTextView.setThreshold(1);
         autoCompleteTextView.setOnItemClickListener((adapterView, view, i, l) -> {
             Intent intent = new Intent(MapsActivity.this, FullScreen.class);
-            intent.putExtra("cabinet", (String)adapterView.getItemAtPosition(i));
+            // Начиная со 103 номера -ь это лабораторный корпус
+            String cabinetName = (String)adapterView.getItemAtPosition(i);
+            intent.putExtra("cabinet", cabinetName);
+            if(Arrays.asList(cabinets).indexOf(cabinetName) > 102) {
+                intent.putExtra("laboratory_campus", true);
+            }
             startActivity(intent);
         });
     }

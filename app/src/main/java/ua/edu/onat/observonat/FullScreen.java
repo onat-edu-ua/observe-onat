@@ -47,22 +47,22 @@ public class FullScreen extends AppCompatActivity {
                 case "102 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 6)));
                     break;
-                case "102-A":
+                case "102-A (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 8)));
                     break;
-                case "103":
+                case "103 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 11)));
                     break;
-                case "104/1-2":
+                case "104/1-2 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
-                case "104":
+                case "104 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
-                case "105-A":
+                case "105-A (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
-                case "105":
+                case "105 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
                 case "106":
@@ -471,38 +471,43 @@ public class FullScreen extends AppCompatActivity {
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(4, 10)));
                     break;
                 case "335":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 12), new PointF(4, 12)));
                     break;
 
                 case "402":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
                     radioGroup.check(R.id.radioFloor4);
                     points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(5,12), new PointF(5, 11)));
                     break;
                 case "402-A":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
                     radioGroup.check(R.id.radioFloor4);
                     points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(4,12), new PointF(4, 13)));
                     break;
                 case "403":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
                     radioGroup.check(R.id.radioFloor4);
                     points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(16.6f,12)));
                     break;
                 case "403-A":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
                     radioGroup.check(R.id.radioFloor4);
                     points = new ArrayList<>(Arrays.asList(new PointF(11.6f,12), new PointF(18.6f,12), new PointF(19, 13)));
                     break;
                 case "404":
-                    floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_4thfloor_lab : R.drawable.ic_floor_4);
+                    floorFullScreen.setImageResource(R.drawable.ic_floor_4);
                     radioGroup.check(R.id.radioFloor4);
                     points = new ArrayList<>(Arrays.asList(new PointF(7.6f,15), new PointF(7.6f,12), new PointF(15, 12), new PointF(15, 15)));
                     break;
 
-
+                case "101 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(8f,16), new PointF(8f,18), new PointF(16, 18), new PointF(16, 26)));
+                    break;
+                case "102 (2 лаб)":
+                    break;
             }
             floorFullScreen.addPointsToImage(points);
         }
