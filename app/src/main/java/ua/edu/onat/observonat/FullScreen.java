@@ -56,13 +56,13 @@ public class FullScreen extends AppCompatActivity {
                 case "104/1-2 (главный)":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
-                case "104 (главный)":
+                case "104 (главный) Отдел комплектования и научной обработки документов":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
-                case "105-A (главный)":
+                case "105-A (главный) Заведующий кафедрой высшей математики":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 14)));
                     break;
-                case "105 (главный)":
+                case "105 (главный) Кафедра высшей математики":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(42,23), new PointF(42, 16)));
                     break;
                 case "106":
@@ -77,13 +77,13 @@ public class FullScreen extends AppCompatActivity {
                 case "107-A":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(30,23), new PointF(30, 22)));
                     break;
-                case "107-B":
+                case "107-B Отдел кадров": // где 107-б? Это отдел военно-учетной и специальной работы
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(18,23), new PointF(18, 22)));
                     break;
-                case "108":
+                case "108 Приемная комиссия":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(15,23), new PointF(15, 22)));
                     break;
-                case "109":
+                case "109 Руководитель центра информационных технологий, сертификации и трудоустройства":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(13,23), new PointF(13, 22)));
                     break;
                 case "110":
@@ -95,25 +95,25 @@ public class FullScreen extends AppCompatActivity {
                 case "111-3":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 27), new PointF(6, 27)));
                     break;
-                case "113/113-A":
+                case "113/113-A Канцелярия":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 19), new PointF(6, 19)));
                     break;
-                case "114/114-A":
+                case "114/114-A Учебный отдел":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 16), new PointF(6, 16)));
                     break;
-                case "115":
+                case "115 Проректор с научной работы":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 15), new PointF(6, 15)));
                     break;
-                case "116":
+                case "116 Отдел расчетов со студентами":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 13), new PointF(6, 13)));
                     break;
-                case "117/117-A":
+                case "117/117-A Бухгалтерия":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 11), new PointF(6, 11)));
                     break;
                 case "118":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 10), new PointF(6, 10)));
                     break;
-                case "119":
+                case "119 Подготовительные курсы/Центр компьютерных информационных технологий": // Касса?
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 8), new PointF(6, 8)));
                     break;
                 case "120":
@@ -122,10 +122,10 @@ public class FullScreen extends AppCompatActivity {
                 case "122":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 15), new PointF(8, 15)));
                     break;
-                case "123":
+                case "123 Начальник отдела кадров":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 16), new PointF(8, 16)));
                     break;
-                case "124":
+                case "124 Проректор по административно-хозяйственной работы":
                     points =  new ArrayList<>(Arrays.asList(new PointF(24.6f,25), new PointF(24.6f,23), new PointF(7,23), new PointF(7, 18), new PointF(8, 18)));
                     break;
 
@@ -145,12 +145,12 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 4), new PointF(31, 4)));
                     break;
-                case "203":
+                case "203 Деканат факультета заочного обучения":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 5), new PointF(31, 5)));
                     break;
-                case "204":
+                case "204 Лаборатория инновационных технологий электронного управления":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 6), new PointF(31, 6)));
@@ -170,7 +170,7 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 12), new PointF(31, 12)));
                     break;
-                case "208":
+                case "208 Международный центра сотрудничества с МСЕ":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 15), new PointF(31, 15)));
@@ -180,17 +180,17 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 17), new PointF(31, 17)));
                     break;
-                case "210":
+                case "210 Центр гуманитарного образования и развития":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 7), new PointF(28, 7)));
                     break;
-                case "210-A":
+                case "210-A Юрисконсульт":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 6), new PointF(28, 6)));
                     break;
-                case "211":
+                case "211 Профком сотрудников":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 8), new PointF(28, 8)));
@@ -200,17 +200,17 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 9), new PointF(28, 9)));
                     break;
-                case "213":
+                case "213 ННИ инфокоммуникация и программной инженерии":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(29,16), new PointF(29, 10), new PointF(28, 10)));
                     break;
-                case "215":
+                case "215 Дирекция ННИ почтовая связь":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(24,16), new PointF(24, 14)));
                     break;
-                case "216":
+                case "216 Буфет":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(23,16), new PointF(23, 14)));
@@ -230,7 +230,7 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(11,16), new PointF(11, 14)));
                     break;
-                case "222":
+                case "222 Лаборатория сетевых технологий":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(9,16), new PointF(9, 14)));
@@ -255,37 +255,37 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 8), new PointF(2, 8)));
                     break;
-                case "227":
+                case "227 Кафедра философии и истории Украины":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 7), new PointF(2, 7)));
                     break;
-                case "228":
+                case "228 Кабинет философии и украинознавтсва":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 4), new PointF(2, 4)));
                     break;
-                case "230":
+                case "230 Музей ОНАС":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 4)));
                     break;
-                case "231":
+                case "231 Кафедра экономической теории":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(2,16), new PointF(2, 3), new PointF(2, 7), new PointF(4, 7)));
                     break;
-                case "229":
+                case "229 Профком студентов":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 6), new PointF(4, 6)));
                     break;
-                case "232":
+                case "232 Заведующий кафедрой философии и истории Украины":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 8), new PointF(4, 8)));
                     break;
-                case "233":
+                case "233 Заведующий кафедрой сети связи":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 9), new PointF(4, 9)));
@@ -295,62 +295,62 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(4, 10)));
                     break;
-                case "235":
+                case "235 Заведующий научно-иследовательским отделом":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_2ndfloor_lab : R.drawable.ic_floor_2);
                     radioGroup.check(R.id.radioFloor2);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 11), new PointF(4, 11)));
                     break;
-                case "301":
+                case "301 Подготовительное отделение для иностранных граждан":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 3)));
                     break;
-                case "302":
+                case "302 Проректор с международных отношений":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 4), new PointF(31, 4)));
                     break;
-                case "303":
+                case "303 Международный отдел":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 5), new PointF(31, 5)));
                     break;
-                case "304":
+                case "304 Кабинет украинского языка и краеведчества":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 7), new PointF(31, 7)));
                     break;
-                case "305":
+                case "305 Подготовительное отделение для иностранных граждан. Компьютерный класс":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 8), new PointF(31, 8)));
                     break;
-                case "306":
+                case "306 Кабинет природоведческих наук":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 11), new PointF(31, 11)));
                     break;
-                case "307":
+                case "307 Кабинет географии и истории":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 12), new PointF(31, 12)));
                     break;
-                case "308":
+                case "308 Центр такжикской культуры":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(31,16)));
                     break;
-                case "309":
+                case "309 Кабинет украинского языка и культуры":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 17)));
                     break;
-                case "310":
+                case "310 Кафедра лингвистической подготовки":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 6), new PointF(29, 6)));
                     break;
-                case "311":
+                case "311 Кабинет украинской и зарубежной литературы":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 7), new PointF(29, 7)));
@@ -370,12 +370,12 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(30,16), new PointF(30, 11), new PointF(29, 11)));
                     break;
-                case "315":
+                case "315 ИЕМ. Заочное отделение":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(26,16), new PointF(26, 14)));
                     break;
-                case "316":
+                case "316 Институт экономики и менеджмента":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(24,16), new PointF(24, 14)));
@@ -390,12 +390,12 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(21,16), new PointF(21, 14)));
                     break;
-                case "319":
+                case "319 Кафедра МтаМ Лаборатория 1":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(19,16), new PointF(19, 12)));
                     break;
-                case "320":
+                case "320 Заведующий кафедрой менеджмента и маркетинга":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(13,16), new PointF(13, 12)));
@@ -415,12 +415,12 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 18)));
                     break;
-                case "324":
+                case "324 Кафедра МтаМ":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(2,16)));
                     break;
-                case "325":
+                case "325 Кафедра экономики предпринимательства и корпоративного управления":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 14), new PointF(2, 14)));
@@ -430,7 +430,7 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(2, 10)));
                     break;
-                case "326":
+                case "326 Центр правовой защиты студентов/Кафедра политологии, социологии и социальных коммуникаций":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 7), new PointF(2, 7)));
@@ -440,32 +440,32 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 4), new PointF(2, 4)));
                     break;
-                case "331":
+                case "331 Кафедра управления проектами и системного анализа":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 3)));
                     break;
-                case "328":
+                case "328 ННИ Проблем информационного сообщества":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 6), new PointF(4, 6)));
                     break;
-                case "329":
+                case "329 Проректор по научно-педагогической и воспитательной работе, директор ННИ Проблем информационного общества":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 7), new PointF(4, 7)));
                     break;
-                case "332":
+                case "332 Отдел социально-психологической и воспитательной работы/Центр психологического консультирования":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 8), new PointF(4, 8)));
                     break;
-                case "333":
+                case "333 Заведующий кафедры экономики предприятия и корпоративного управления":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 9), new PointF(4, 9)));
                     break;
-                case "334":
+                case "334 Кафедра физвоспитания":
                     floorFullScreen.setImageResource(is_laboratory_campus ? R.drawable.ic_3dfloor_lab : R.drawable.ic_floor_3);
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 10), new PointF(4, 10)));
@@ -475,6 +475,7 @@ public class FullScreen extends AppCompatActivity {
                     radioGroup.check(R.id.radioFloor3);
                     points = new ArrayList<>(Arrays.asList(new PointF(16.6f,17), new PointF(16.6f,16), new PointF(3,16), new PointF(3, 12), new PointF(4, 12)));
                     break;
+                    // 336 - Заведующий кафедрой физ. воспитания
 
                 case "402":
                     floorFullScreen.setImageResource(R.drawable.ic_floor_4);
