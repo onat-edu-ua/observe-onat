@@ -504,10 +504,218 @@ public class FullScreen extends AppCompatActivity {
 
                 case "101 (2 лаб)":
                     floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
-                    points = new ArrayList<>(Arrays.asList(new PointF(8f,16), new PointF(8f,18), new PointF(16, 18), new PointF(16, 26)));
+                    points = new ArrayList<>(Arrays.asList(new PointF(8f,16), new PointF(8f,18), new PointF(16, 18), new PointF(16, 22)));
                     break;
-                case "102 (2 лаб)":
+                case "103 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,16), new PointF(16f,18), new PointF(16, 22)));
                     break;
+                case "104 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(21, 18), new PointF(21, 16)));
+                    break;
+                case "105 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(25, 18), new PointF(25, 16)));
+                    break;
+                case "106 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(27, 18), new PointF(27, 16)));
+                    break;
+                case "107 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,20), new PointF(18, 20)));
+                    break;
+                case "108 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(11, 18), new PointF(11, 19)));
+                    break;
+                case "109 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(4, 18), new PointF(4, 19)));
+                    break;
+                case "116 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(2, 18)));
+                    break;
+                case "124 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_1stfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(16f,22), new PointF(16f,18), new PointF(22, 18), new PointF(22, 19)));
+                    break;
+
+                case "242-A (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(18, 18), new PointF(18, 19)));
+                    break;
+                case "248 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18)));
+                    break;
+                case "243 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(16, 18), new PointF(16, 19)));
+                    break;
+                case "244 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(13, 18), new PointF(13, 19)));
+                    break;
+                case "247 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(5, 18), new PointF(5, 19)));
+                    break;
+                case "249 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(7, 18), new PointF(7, 17)));
+                    break;
+                case "250 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(11, 18), new PointF(11, 17)));
+                    break;
+                case "251 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(13, 18), new PointF(13, 17)));
+                    break;
+                case "252 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(16, 18), new PointF(16, 17)));
+                    break;
+                case "253 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_2ndfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(18, 18), new PointF(18, 17)));
+                    break;
+
+                case "363 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(16, 18), new PointF(16, 19)));
+                    break;
+                case "364 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(13, 18), new PointF(13, 19)));
+                    break;
+                case "365 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(10, 18), new PointF(10, 19)));
+                    break;
+                case "366 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(8, 18), new PointF(8, 19)));
+                    break;
+                case "367 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(6, 18), new PointF(6, 19)));
+                    break;
+                case "368 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18)));
+                    break;
+                case "370, 370-A (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(5, 18), new PointF(5, 17)));
+                    break;
+                case "372 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(14, 18), new PointF(14, 17)));
+                    break;
+                case "373 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(18, 18), new PointF(18, 17)));
+                    break;
+                case "374 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_3dfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(26, 18), new PointF(26, 17)));
+                    break;
+
+                case "496 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(26, 18), new PointF(26, 17)));
+                    break;
+                case "495 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(22, 18), new PointF(22, 17)));
+                    break;
+                case "494 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(19, 18), new PointF(19, 17)));
+                    break;
+                case "493 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(15, 18), new PointF(15, 17)));
+                    break;
+                case "485 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(15, 18), new PointF(15, 19)));
+                    break;
+                case "492 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(11, 18), new PointF(11, 17)));
+                    break;
+                case "486 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(11, 18), new PointF(11, 19)));
+                    break;
+                case "491 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(8, 18), new PointF(8, 17)));
+                    break;
+                case "487 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(8, 18), new PointF(8, 19)));
+                    break;
+                case "488 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_4thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(6, 18), new PointF(6, 19)));
+                    break;
+
+                case "502 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,17)));
+                    break;
+                case "503 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(7, 18), new PointF(7, 17)));
+                    break;
+                case "504 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(11, 18), new PointF(11, 17)));
+                    break;
+                case "515 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(11, 18), new PointF(11, 19)));
+                    break;
+                case "505 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(13, 18), new PointF(13, 17)));
+                    break;
+                case "506 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(16, 18), new PointF(16, 17)));
+                    break;
+                case "514 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(15, 18), new PointF(15, 19)));
+                    break;
+                case "507 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(18, 18), new PointF(18, 17)));
+                    break;
+                case "513 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(20, 18), new PointF(20, 19)));
+                    break;
+                case "508 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(22, 18), new PointF(22, 17)));
+                    break;
+                case "509 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(29, 18), new PointF(29, 17)));
+                    break;
+                case "512 (2 лаб)":
+                    floorFullScreen.setImageResource(R.drawable.ic_5thfloor_lab);
+                    points = new ArrayList<>(Arrays.asList(new PointF(3f,20), new PointF(3f,18), new PointF(25, 18), new PointF(25, 19)));
+                    break;
+
+
             }
             floorFullScreen.addPointsToImage(points);
         }
