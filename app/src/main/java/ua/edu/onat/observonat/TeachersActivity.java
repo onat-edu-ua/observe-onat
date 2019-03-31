@@ -22,7 +22,11 @@ public class TeachersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers);
         ListView teacher_departments_list = findViewById(R.id.teacher_departments_list);
-        String[] teachers_deps = {"Кафедра ВОЛС", "Кафедра вышмата", "Кафедра коммутационных систем"};
+        String[] teachers_deps = {"Кафедра ВОЛС", "Кафедра высшей математики", "Кафедра коммутационных систем", "Кафедра информационных технологий",
+        "Кафедра сетей связи", "Кафедра телекоммуникационных систем", "Кафедра компьютерных наук", "Кафедра телевидения и радиовещания", "Кафедра ТЭС",
+        "Кафедра ТЭД", "Кафедра ИБ и ПД", "Кафедра КИТПиВ", "Кафедра физического воспитания", "Кафедра АТП", "Кафедра ЭТ и УП", "Кафедра экономики предприятия",
+        "Кафедра менеджмента и маркетинга", "Кафедра политологии и социологии", "Кафедра лингвистической подготовки", "Кафедра философии и истории Украины",
+        "Кафедра заочного обучения"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teachers_deps);
         teacher_departments_list.setAdapter(adapter);
         teacher_departments_list.setOnItemClickListener(
