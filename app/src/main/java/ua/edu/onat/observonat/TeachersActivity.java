@@ -9,6 +9,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.Arrays;
+
 public class TeachersActivity extends AppCompatActivity {
 
     @Override
@@ -20,12 +22,16 @@ public class TeachersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teachers);
         ListView teacher_departments_list = findViewById(R.id.teacher_departments_list);
-        String[] teachers_deps = {"Кафедра ВОЛС", "Кафедра вышмата", "Кафедра ещё какой-то херни"};
+        String[] teachers_deps = {"Кафедра ВОЛС", "Кафедра вышмата", "Кафедра коммутационных систем"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, teachers_deps);
         teacher_departments_list.setAdapter(adapter);
         teacher_departments_list.setOnItemClickListener(
-                (adapterView, view, i, l) -> startActivity(new Intent(getApplicationContext(), TeacherDepartmentActivity.class))
+                (adapterView, view, i, l) -> {
+                    Intent intent = new Intent(TeachersActivity.this, TeacherDepartmentActivity.class);
+                    String dept_name = (String)adapterView.getItemAtPosition(i);
+                    intent.putExtra("dept_name", dept_name);
+                    startActivity(intent);
+                }
         );
     }
-
 }

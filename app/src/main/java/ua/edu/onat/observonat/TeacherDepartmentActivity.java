@@ -32,9 +32,22 @@ public class TeacherDepartmentActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
+        String dept_name = getIntent().getStringExtra("dept_name");
         String url ="https://onat.edu.ua/instituti/ik-and-pi/volz/sklad-kafedry_volz/";
+        switch(dept_name) {
+            case "Кафедра ВОЛС":
+                url = "https://onat.edu.ua/instituti/ik-and-pi/volz/sklad-kafedry_volz/";
+                break;
+            case "Кафедра вышмата":
+                url = "https://onat.edu.ua/instituti/ik-and-pi/vm/sklad-kafedry_vm/";
+                break;
+            case "Кафедра коммутационных систем":
+                url = "https://onat.edu.ua/instituti/ik-and-pi/ks/sklad-kafedry_ks/";
+                break;
+        }
         try {
             Document doc = Jsoup.connect(url).get();
+            Log.v("contents", doc.html());
             Elements header = doc.select("header");
             header.attr("style", "display:none");
             Elements pageheading = doc.select(".page-heading");
